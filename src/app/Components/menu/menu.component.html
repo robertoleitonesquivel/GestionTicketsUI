@@ -1,0 +1,18 @@
+<mat-list-item (click)="toggle = !toggle">
+  <div>
+    <mat-icon>{{menu.Icon}}</mat-icon>
+    {{menu.Description}}
+    <mat-icon class="expanded" *ngIf="toggle">expand_less</mat-icon>
+    <mat-icon class="expanded" *ngIf="!toggle">expand_more</mat-icon>
+  </div>
+</mat-list-item>
+<ng-container *ngIf="toggle">
+  <ng-container *ngFor="let children of menus">
+    <mat-list-item>
+      <div [routerLink]="children.Navigation">
+        <mat-icon>{{children.Icon}}</mat-icon>
+        {{children.Description}}
+      </div>
+    </mat-list-item>
+  </ng-container>
+</ng-container>

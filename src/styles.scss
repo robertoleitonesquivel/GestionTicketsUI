@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+
+  .col-lg-1 {
+    grid-column: span 12;
+  }
+  .col-lg-2 {
+    grid-column: span 12;
+  }
+  .col-lg-3 {
+    grid-column: span 12;
+  }
+  .col-lg-4 {
+    grid-column: span 12;
+  }
+  .col-lg-5 {
+    grid-column: span 12;
+  }
+  .col-lg-6 {
+    grid-column: span 12;
+  }
+  .col-lg-7 {
+    grid-column: span 12;
+  }
+  .col-lg-8 {
+    grid-column: span 12;
+  }
+  .col-lg-9 {
+    grid-column: span 12;
+  }
+  .col-lg-10 {
+    grid-column: span 12;
+  }
+  .col-lg-11 {
+    grid-column: span 12;
+  }
+  .col-lg-12 {
+    grid-column: span 12;
+  }
+}
+
+.mat-mdc-snack-bar-container {
+  &.error-alert {
+    --mdc-snackbar-container-color: #c62828;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: white;
+  }
+
+  &.warning-alert {
+    --mdc-snackbar-container-color: #f9a825;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: white;
+  }
+
+  &.info-alert {
+    --mdc-snackbar-container-color: #039be5;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: white;
+  }
+
+  &.success-alert {
+    --mdc-snackbar-container-color: #2e7d32;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: white;
+  }
+}
+
+

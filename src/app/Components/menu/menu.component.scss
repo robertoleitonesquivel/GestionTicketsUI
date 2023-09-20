@@ -1,0 +1,11 @@
+div{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  .expanded{
+     position: absolute;
+     right: 0;
+  }
+}
+
