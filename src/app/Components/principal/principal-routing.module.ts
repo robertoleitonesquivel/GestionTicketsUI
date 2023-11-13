@@ -2,16 +2,20 @@ import { UpdatePasswordModule } from '@Components/update-password/update-passwor
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PrincipalComponent } from './principal.component';
+import { GetEmployeesResolver } from '@app/Resolver/employees.resolver';
+import { verifySession } from '@Utils/guards/verifySession';
 
 
 const routes: Routes = [
   {
     path: '',
     component: PrincipalComponent,
+    canActivate:[verifySession],
     children: [
       {
         path: 'employees',
-        loadChildren: () => import('../employees/employees.module').then(m => m.EmployeesModule)
+        loadChildren: () => import('../employees/employees.module').then(m => m.EmployeesModule),
+        resolve: [GetEmployeesResolver]
       },
       {
         path: 'rols',

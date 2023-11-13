@@ -24,7 +24,13 @@ export class CommonService {
   }
 
   public getStorage<T>(_key: string): T {
-    return JSON.parse(localStorage.getItem(_key,) ?? '') as T;
+    let data = localStorage.getItem(_key);
+    if (data) {
+      return JSON.parse(data) as T;
+    } else {
+      return {} as T;
+    }
+
   }
 
   public clearStorage(): void {
